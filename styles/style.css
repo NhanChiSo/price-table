@@ -78,6 +78,8 @@ textarea {
   margin: 0 auto;
 }
 
+/* --------------------- responsive --------------------- */
+
 /* ----------------------- header  --------------*/
 .header {
   width: 100%;
@@ -274,7 +276,7 @@ textarea {
 .slide_direct {
   display: inline-block;
   padding: 2.5rem;
-  background-color: #212331;
+  background-color: #21233181;
   cursor: pointer;
 
   position: absolute;
