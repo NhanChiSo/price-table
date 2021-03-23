@@ -31,22 +31,28 @@
             </a>
             <nav class="nav_menu">
               <ul class="menu">
-                <li class="nav_item"><a href="#">Home</a></li>
-                <li class="nav_item"><a href="#">Pages</a></li>
-                <li class="nav_item"><a href="#">Blog</a></li>
-                <li class="nav_item"><a href="#">Portfolios</a></li>
-                <li class="nav_item"><a href="#">Shop</a></li>
-                <li class="nav_item"><a href="#">Features</a></li>
-                <li class="nav_item"><a href="#">Elements</a></li>
+                <li class="nav_item"><a class="nav_link" href="#">Home</a></li>
+                <li class="nav_item"><a class="nav_link" href="#">Pages</a></li>
+                <li class="nav_item"><a class="nav_link" href="#">Blog</a></li>
+                <li class="nav_item">
+                  <a class="nav_link" href="#">Portfolios</a>
+                </li>
+                <li class="nav_item"><a class="nav_link" href="#">Shop</a></li>
+                <li class="nav_item">
+                  <a class="nav_link" href="#">Features</a>
+                </li>
+                <li class="nav_item">
+                  <a class="nav_link" href="#">Elements</a>
+                </li>
               </ul>
             </nav>
-            <div class="header_icon">
-              <img src="./icons/flag-1.png" alt="" />
-              <img src="./icons/search.png" alt="" />
+            <div class="header_right">
+              <img class="header_icon" src="./icons/flag-1.png" alt="" />
+              <img class="header_icon" src="./icons/search.png" alt="" />
               <div class="icon_cart">
-                <img src="./icons/cart.png" alt="" />
-                <img src="./icons/icon2.png" alt="" />
-                <span>2</span>
+                <img class="header_icon" src="./icons/cart.png" alt="" />
+                <img class="header_icon" src="./icons/icon2.png" alt="" />
+                <span class="cart_quantity">2</span>
               </div>
             </div>
             <div class="menu_btn">
@@ -55,8 +61,10 @@
           </div>
           <div class="header_slide">
             <div class="slide_item active">
-              <img src="./icons/bar.png" alt="" />
-              <div class="slide_title">Pricing <span>Tables</span></div>
+              <img class="slide_img" src="./icons/bar.png" alt="" />
+              <div class="slide_title">
+                Pricing <span class="title_bold">Tables</span>
+              </div>
               <p class="slide_content">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -69,8 +77,10 @@
               </div>
             </div>
             <div class="slide_item">
-              <img src="./icons/bar.png" alt="" />
-              <div class="slide_title">Pricing <span>Tables 2</span></div>
+              <img class="slide_img" src="./icons/bar.png" alt="" />
+              <div class="slide_title">
+                Pricing <span class="title_bold">Tables 2</span>
+              </div>
               <p class="slide_content">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -85,8 +95,10 @@
               </div>
             </div>
             <div class="slide_item">
-              <img src="./icons/bar.png" alt="" />
-              <div class="slide_title">Pricing <span>Tables 3</span></div>
+              <img class="slide_img" src="./icons/bar.png" alt="" />
+              <div class="slide_title">
+                Pricing <span class="title_bold">Tables 3</span>
+              </div>
               <p class="slide_content">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -117,7 +129,9 @@
       </header>
       <section class="content">
         <div class="container">
-          <div class="content_title">Lorem <span>Ipsum</span></div>
+          <div class="content_title">
+            Lorem <span class="title_bold">Ipsum</span>
+          </div>
           <div class="content_desc">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -139,69 +153,77 @@
           </div>
           <div class="content_card">
             <div class="card_item">
-              <h2>Lorem Ipsum</h2>
-              <h4>Subtitle second line goes here</h4>
-              <div class="card_price"><span>$99</span> per month</div>
+              <p class="card_name">Lorem Ipsum</p>
+              <p class="card_subtitle">Subtitle second line goes here</p>
+              <div class="card_price">
+                <span class="price">$99</span> per month
+              </div>
               <div class="card_title">Basic</div>
               <hr />
               <div class="card_content">
-                <p>Photo sharing school</p>
-                <p>Drop out ramen hustle</p>
-                <p>Photo sharing school</p>
-                <p class="disabled">Crush reveuneu traction</p>
-                <p class="disabled">User base minimun viable</p>
-                <p class="disabled">Lorem ipsum color</p>
+                <p class="content_line">Photo sharing school</p>
+                <p class="content_line">Drop out ramen hustle</p>
+                <p class="content_line">Photo sharing school</p>
+                <p class="content_line disabled">Crush reveuneu traction</p>
+                <p class="content_line disabled">User base minimun viable</p>
+                <p class="content_line disabled">Lorem ipsum color</p>
               </div>
               <div class="card_btn">order now</div>
             </div>
             <div class="card_item new">
-              <h2>Lorem Ipsum</h2>
-              <h4>Subtitle second line goes here</h4>
-              <div class="card_price"><span>$99</span> per month</div>
+              <p class="card_name">Lorem Ipsum</p>
+              <p class="card_subtitle">Subtitle second line goes here</p>
+              <div class="card_price">
+                <span class="price">$99</span> per month
+              </div>
               <div class="card_title">Standard</div>
               <p class="title_hide">The best price/quantity plan *</p>
               <hr />
               <div class="card_content">
-                <p>Photo sharing school</p>
-                <p>Drop out ramen hustle</p>
-                <p>Photo sharing school</p>
-                <p class="disabled">Crush reveuneu traction</p>
-                <p class="disabled">User base minimun viable</p>
-                <p class="disabled">Lorem ipsum color</p>
+                <p class="content_line">Photo sharing school</p>
+                <p class="content_line disabled">Drop out ramen hustle</p>
+                <p class="content_line">Photo sharing school</p>
+                <p class="content_line">Crush reveuneu traction</p>
+                <p class="content_line disabled">User base minimun viable</p>
+                <p class="content_line disabled">Lorem ipsum color</p>
               </div>
               <div class="card_btn">order now</div>
             </div>
             <div class="card_item">
-              <h2>Lorem Ipsum</h2>
-              <h4>Subtitle second line goes here</h4>
-              <div class="card_price"><span>$99</span> per month</div>
+              <p class="card_name">Lorem Ipsum</p>
+              <p class="card_subtitle">Subtitle second line goes here</p>
+              <div class="card_price">
+                <span class="price">$99</span> per month
+              </div>
               <div class="card_title">Ultimate</div>
               <p class="title_hide">The best price/quantity plan *</p>
               <hr />
               <div class="card_content">
-                <p>Photo sharing school</p>
-                <p>Drop out ramen hustle</p>
-                <p>Photo sharing school</p>
-                <p class="disabled">Crush reveuneu traction</p>
-                <p class="disabled">User base minimun viable</p>
-                <p class="disabled">Lorem ipsum color</p>
+                <p class="content_line disabled">Photo sharing school</p>
+                <p class="content_line">Drop out ramen hustle</p>
+                <p class="content_line">Photo sharing school</p>
+                <p class="content_line disabled">Crush reveuneu traction</p>
+                <p class="content_line">User base minimun viable</p>
+                <p class="content_line disabled">Lorem ipsum color</p>
               </div>
               <div class="card_btn">order now</div>
             </div>
             <div class="card_item">
-              <h2>Lorem Ipsum</h2>
-              <h4>Subtitle second line goes here</h4>
-              <div class="card_price"><span>$99</span> per month</div>
+              <p class="card_name">Lorem Ipsum</p>
+              <p class="card_subtitle">Subtitle second line goes here</p>
+              <div class="card_price">
+                <span class="price">$99</span> per month
+              </div>
               <div class="card_title">Premium</div>
               <p class="title_hide">The best price/quantity plan *</p>
               <hr />
               <div class="card_content">
-                <p>Photo sharing school</p>
-                <p>Drop out ramen hustle</p>
-                <p>Photo sharing school</p>
-                <p class="disabled">Crush reveuneu traction</p>
-                <p class="disabled">User base minimun viable</p>
-                <p class="disabled">Lorem ipsum color</p>
+                <p class="content_line">Photo sharing school</p>
+                <p class="content_line disabled">Drop out ramen hustle</p>
+                <p class="content_line disabled">Photo sharing school</p>
+                <p class="content_line">Crush reveuneu traction</p>
+                <p class="content_line">User base minimun viable</p>
+                <p class="content_line disabled">Lorem ipsum color</p>
               </div>
               <div class="card_btn">order now</div>
             </div>
@@ -210,7 +232,7 @@
       </section>
       <section class="adblock">
         <div class="container">
-          <img src="./icons/icon.png" alt="" />
+          <img class="adblock_img" src="./icons/icon.png" alt="" />
           <div class="adblock_title">Ad block</div>
           <div class="adblock_content">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -238,7 +260,11 @@
                 <div class="footer_contact">
                   <div class="contact_address">
                     <div class="row">
-                      <img src="./icons/address.png" alt="" />
+                      <img
+                        class="contact_img"
+                        src="./icons/address.png"
+                        alt=""
+                      />
                       <p>Address:</p>
                     </div>
                     <p>
@@ -247,19 +273,23 @@
                     <p>20037, United States</p>
                   </div>
                   <div class="row">
-                    <img src="./icons/headphone.png" alt="" />
+                    <img
+                      class="contact_img"
+                      src="./icons/headphone.png"
+                      alt=""
+                    />
                     <p>Phone: +1 916-875-2235</p>
                   </div>
                   <div class="row">
-                    <img src="./icons/icon4.png" alt="" />
+                    <img class="contact_img" src="./icons/icon4.png" alt="" />
                     <p>Fax: +1 916-875-2235</p>
                   </div>
                   <div class="row">
-                    <img src="./icons/letter.png" alt="" />
+                    <img class="contact_img" src="./icons/letter.png" alt="" />
                     <p>Email: info@domain.ltd</p>
                   </div>
                   <div class="row">
-                    <img src="./icons/global.png" alt="" />
+                    <img class="contact_img" src="./icons/global.png" alt="" />
                     <p>Website: www.codex-themes.com</p>
                   </div>
                 </div>
@@ -270,43 +300,66 @@
               <div class="row">
                 <div class="avatar"></div>
                 <div class="desc">
-                  <p>Proin gravida nibh vel velit auctor aliquet aenean...</p>
+                  <p class="desc_text">
+                    Proin gravida nibh vel velit auctor aliquet aenean...
+                  </p>
                   <div class="row">
                     <p class="time">27 Dec 2015</p>
-                    <span><img src="./icons/chat.png" alt="" /> 0</span>
+                    <span
+                      ><img class="desc_img" src="./icons/chat.png" alt="" />
+                      0</span
+                    >
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="avatar"></div>
                 <div class="desc">
-                  <p>
+                  <p class="desc_text">
                     Proin gravida nibh vel velit auctor aliquet proin gravida
                     nibh vel velit auctor aliquet aenean...
                   </p>
                   <div class="row">
                     <p class="time">27 Dec 2015</p>
-                    <span><img src="./icons/chat.png" alt="" /> 14</span>
+                    <span
+                      ><img class="desc_img" src="./icons/chat.png" alt="" />
+                      14</span
+                    >
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="avatar"></div>
                 <div class="desc">
-                  <p>Proin gravida nibh vel velit auctor aliquet aenean...</p>
+                  <p class="desc_text">
+                    Proin gravida nibh vel velit auctor aliquet aenean...
+                  </p>
                   <div class="row">
                     <p class="time">27 Dec 2015</p>
-                    <span><img src="./icons/chat.png" alt="" /> 3</span>
+                    <span
+                      ><img class="desc_img" src="./icons/chat.png" alt="" />
+                      3</span
+                    >
                   </div>
                 </div>
               </div>
               <p class="footer_title">Useful Links</p>
               <ul>
-                <li><a href="#">General Information For Users</a></li>
-                <li><a href="#">Interactive Fairy Tales</a></li>
-                <li><a href="#">Official Storybook Maker Website</a></li>
-                <li><a href="#">Everyday Mathematics Links</a></li>
-                <li><a href="#">Basic Knowledge and Experience</a></li>
+                <li class="useful_link">
+                  <a href="#">General Information For Users</a>
+                </li>
+                <li class="useful_link">
+                  <a href="#">Interactive Fairy Tales</a>
+                </li>
+                <li class="useful_link">
+                  <a href="#">Official Storybook Maker Website</a>
+                </li>
+                <li class="useful_link">
+                  <a href="#">Everyday Mathematics Links</a>
+                </li>
+                <li class="useful_link">
+                  <a href="#">Basic Knowledge and Experience</a>
+                </li>
               </ul>
             </div>
             <div class="col col_3">
@@ -350,9 +403,13 @@
                 all events coming straight in your mailbox:
               </p>
               <div class="row mail">
-                <input type="email" placeholder="Your email address" />
+                <input
+                  class="mail_input"
+                  type="email"
+                  placeholder="Your email address"
+                />
                 <div class="btn_email">
-                  <img src="./icons/icon3.png" alt="" />
+                  <img class="email_img" src="./icons/icon3.png" alt="" />
                 </div>
               </div>
               <p class="text">* Personal information will be encrypted</p>
