@@ -11,24 +11,24 @@ menuBtn.addEventListener("click", function () {
 document.addEventListener("DOMContentLoaded", function () {
   let page = document.querySelectorAll(".dot"),
     slides = document.querySelectorAll(".slide_item"),
-    next = document.querySelector(".next"),
-    pre = document.querySelector(".prev"),
-    pagenum = 0,
-    move = false; // trạng thái ko chuyển động
+    slideNextBtn = document.querySelector(".next"),
+    slidePrevBtn = document.querySelector(".prev"),
+    pageNum = 0,
+    isSlideMoving = false; // trạng thái ko chuyển động
 
-  var slideNext = function () {
-    if (move == true) {
+  function handleSlideNext() {
+    if (isSlideMoving == true) {
       return false;
     }
-    move = true;
+    isSlideMoving = true;
 
-    let status2ani = 0; // trạng thái 2 animation
-    let currSlide = slides[pagenum];
-    let currPage = page[pagenum];
+    let countAnimation = 0; // trạng thái 2 animation
+    let currSlide = slides[pageNum];
+    let currPage = page[pageNum];
 
-    pagenum = pagenum < slides.length - 1 ? pagenum + 1 : 0;
+    pageNum = pageNum < slides.length - 1 ? pageNum + 1 : 0;
 
-    let nextSlide = slides[pagenum];
+    let nextSlide = slides[pageNum];
 
     //slide
     currSlide.classList.remove("active");
@@ -36,38 +36,34 @@ document.addEventListener("DOMContentLoaded", function () {
     nextSlide.classList.add("active", "in-next");
 
     // pagination
-    page[pagenum].classList.add("active");
+    page[pageNum].classList.add("active");
     currPage.classList.remove("active");
 
     // animation
     currSlide.addEventListener("webkitAnimationEnd", function () {
       this.classList.remove("out-next");
-      status2ani++;
-      if (status2ani == 2) {
-        move = false; // đã chuyển động xong
-      }
+      countAnimation++;
+      isSlideMoving = countAnimation == 2 ? false : true;
     });
     nextSlide.addEventListener("webkitAnimationEnd", function () {
       this.classList.remove("in-next");
-      status2ani++;
-      if (status2ani == 2) {
-        move = false; //đã chuyển động xong
-      }
+      countAnimation++;
+      isSlideMoving = countAnimation == 2 ? false : true;
     });
-  };
+  }
 
-  var slidePre = function () {
-    if (move == true) {
+  function handleSlidePrev() {
+    if (isSlideMoving == true) {
       return false;
     }
-    move = true;
-    let status2ani = 0;
-    let currSlide = slides[pagenum];
-    let currPage = page[pagenum];
+    isSlideMoving = true;
+    let countAnimation = 0;
+    let currSlide = slides[pageNum];
+    let currPage = page[pageNum];
 
-    pagenum = pagenum > 0 ? pagenum - 1 : slides.length - 1;
+    pageNum = pageNum > 0 ? pageNum - 1 : slides.length - 1;
 
-    var preSlide = slides[pagenum];
+    let preSlide = slides[pageNum];
 
     // slide
     currSlide.classList.remove("active");
@@ -75,35 +71,31 @@ document.addEventListener("DOMContentLoaded", function () {
     preSlide.classList.add("active", "in-pre");
 
     // pagination
-    page[pagenum].classList.add("active");
+    page[pageNum].classList.add("active");
     currPage.classList.remove("active");
 
     //animation
     currSlide.addEventListener("webkitAnimationEnd", function () {
       this.classList.remove("out-pre");
-      status2ani++;
-      if (status2ani == 2) {
-        move = false;
-      }
+      countAnimation++;
+      isSlideMoving = countAnimation == 2 ? false : true;
     });
     preSlide.addEventListener("webkitAnimationEnd", function () {
       this.classList.remove("in-pre");
-      status2ani++;
-      if (status2ani == 2) {
-        move = false;
-      }
+      countAnimation++;
+      isSlideMoving = countAnimation == 2 ? false : true;
     });
-  };
+  }
 
-  next.addEventListener("click", slideNext);
-  pre.addEventListener("click", slidePre);
+  slideNextBtn.addEventListener("click", handleSlideNext);
+  slidePrevBtn.addEventListener("click", handleSlidePrev);
 
   // ---------------  keyboard -----------------
   window.addEventListener("keydown", function (event) {
     if (event.key == "ArrowRight") {
-      return slideNext();
+      return handleSlideNext();
     } else if (event.key == "ArrowLeft") {
-      return slidePre();
+      return handleSlidePrev();
     }
   });
 
@@ -117,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.add("active");
       slides[i].classList.add("active");
 
-      pagenum = i;
+      pageNum = i;
     });
   }
 });
