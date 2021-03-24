@@ -16,14 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
     pageNum = 0,
     isSlideMoving = false; // trạng thái ko chuyển động
 
-  var autoNextSlide = setInterval(handleSlideNext, 5000);
+  let autoNextSlide = setInterval(handleSlideNext, 5000);
 
   function resetAutoSlide() {
     clearInterval(autoNextSlide);
     autoNextSlide = setInterval(handleSlideNext, 5000);
   }
-
-  // handleAutoSlide(true, handleSlideNext);
 
   function handleSlideNext() {
     if (isSlideMoving == true) {
@@ -53,13 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.remove("out-next");
       countAnimation++;
       isSlideMoving = countAnimation == 2 ? false : true;
-      // handleAutoSlide(!isSlideMoving, handleSlideNext);
     });
     nextSlide.addEventListener("webkitAnimationEnd", function () {
       this.classList.remove("in-next");
       countAnimation++;
       isSlideMoving = countAnimation == 2 ? false : true;
-      // handleAutoSlide(!isSlideMoving, handleSlideNext);
     });
   }
 
