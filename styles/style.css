@@ -12,11 +12,22 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   background-color: white;
   color: #222222;
   width: 100%;
   margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nav_link,
+.btn_font {
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -40,12 +51,10 @@ button {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  font-family: "Montserrat", sans-serif;
 }
 
 input,
 textarea {
-  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
 
@@ -119,7 +128,6 @@ textarea {
   font-weight: 700;
   text-transform: uppercase;
 
-  padding: 0.5rem 1.5rem;
   transition: 0.3s;
   margin: 0 0.5rem;
   border: 4px solid transparent;
@@ -127,6 +135,10 @@ textarea {
 
 .nav_item:hover {
   border: 4px solid white;
+}
+
+.nav_item .nav_link {
+  padding: 0.5rem 1.5rem;
 }
 
 .nav_item:hover .nav_link {
@@ -156,7 +168,6 @@ textarea {
 }
 
 .icon_cart .cart_quantity {
-  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.4rem;
   color: white;
   font-weight: 700;
@@ -202,7 +213,6 @@ textarea {
 }
 
 .slide_item .slide_content {
-  font-family: "Source Sans Pro", sans-serif;
   font-size: 2.4rem;
   font-weight: 200;
   margin-top: 4rem;
@@ -315,7 +325,6 @@ textarea {
 
 .content_desc {
   font-size: 1.6rem;
-  font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   line-height: 1.5;
 
@@ -335,14 +344,16 @@ textarea {
 .card_item {
   width: 23%;
   background-color: #f0f3f2;
-  padding: 4rem 3.5rem;
-  font-family: "Source Sans Pro", sans-serif;
 
   text-align: center;
   border-radius: 5rem;
   transition: all 0.3s ease-in;
 
   cursor: pointer;
+}
+
+.card_container {
+  padding: 4rem 3.5rem;
 }
 
 .card_item:hover {
@@ -356,7 +367,7 @@ textarea {
 .card_item.new::before {
   content: "NEW";
   position: absolute;
-  top: -3rem;
+  transform: translateY(-50%);
   left: 12%;
 
   background-color: #f44336;
@@ -364,7 +375,6 @@ textarea {
 
   color: white;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
 
   padding: 2.4rem 1.4rem;
@@ -409,7 +419,6 @@ textarea {
 }
 
 .card_title {
-  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2.4rem;
@@ -432,11 +441,12 @@ textarea {
   display: block;
 }
 
-.card_item > hr {
-  width: 25%;
+.card_item .line {
+  width: 40%;
   height: 2px;
-  background-color: #00bcd4;
+  background-color: #00bbd477;
   margin: 2rem auto;
+  border-radius: 20px;
 }
 
 .card_content .content_line {
@@ -465,7 +475,6 @@ textarea {
   max-width: 16rem;
   margin: 4rem auto 0.5rem;
 
-  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.6rem;
@@ -521,7 +530,6 @@ textarea {
 /* --------------------- footer ----------------- */
 .footer {
   padding: 13rem 0;
-  font-family: "Source Sans Pro", sans-serif;
   color: #99a9b5;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -547,7 +555,6 @@ textarea {
 }
 
 .footer_title {
-  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.9rem;
@@ -708,13 +715,21 @@ textarea {
   border-left: 1px solid #333146;
 }
 
+.footer_social,
+.footer_nav .item {
+  cursor: pointer;
+}
+
+.footer_nav .item:hover {
+  color: white;
+}
+
 .footer_nav .item:first-child {
   border-left: none;
 }
 
 /* -------------------- global --------------------- */
 .btn {
-  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.9rem;
   font-weight: 700;
 

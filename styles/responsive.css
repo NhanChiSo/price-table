@@ -28,10 +28,11 @@
 
   .header_top .nav_item {
     min-width: 15rem;
-    padding: 2rem 0;
     display: block;
-
     border: none;
+  }
+  .nav_item .nav_link {
+    padding: 1.8rem 0;
   }
   .header_top .nav_item:not(:last-child) {
     border-bottom: 1px solid #ffffff26;
@@ -103,14 +104,21 @@
   }
 
   .card_item {
-    width: 45%;
+    width: 40%;
     margin-bottom: 2rem;
   }
   .content_card {
     flex-wrap: wrap;
+    justify-content: space-around;
   }
   .content .container {
     padding: 8rem 4rem;
+  }
+
+  .footer_bot,
+  .footer_top {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -188,6 +196,9 @@
     font-size: 1.8rem;
     margin-top: 4rem;
   }
+  .content_card {
+    padding: 0 3rem;
+  }
   .card_item {
     width: 100%;
     margin-bottom: 4rem;
@@ -212,5 +223,10 @@
   }
   .footer_social {
     margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .content_card {
+    padding: 0;
   }
 }
