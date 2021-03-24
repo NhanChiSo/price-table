@@ -16,6 +16,15 @@ document.addEventListener("DOMContentLoaded", function () {
     pageNum = 0,
     isSlideMoving = false; // trạng thái ko chuyển động
 
+  var autoNextSlide = setInterval(handleSlideNext, 5000);
+
+  function resetAutoSlide() {
+    clearInterval(autoNextSlide);
+    autoNextSlide = setInterval(handleSlideNext, 5000);
+  }
+
+  // handleAutoSlide(true, handleSlideNext);
+
   function handleSlideNext() {
     if (isSlideMoving == true) {
       return false;
@@ -44,11 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.remove("out-next");
       countAnimation++;
       isSlideMoving = countAnimation == 2 ? false : true;
+      // handleAutoSlide(!isSlideMoving, handleSlideNext);
     });
     nextSlide.addEventListener("webkitAnimationEnd", function () {
       this.classList.remove("in-next");
       countAnimation++;
       isSlideMoving = countAnimation == 2 ? false : true;
+      // handleAutoSlide(!isSlideMoving, handleSlideNext);
     });
   }
 
@@ -87,14 +98,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  slideNextBtn.addEventListener("click", handleSlideNext);
-  slidePrevBtn.addEventListener("click", handleSlidePrev);
+  slideNextBtn.addEventListener("click", function () {
+    handleSlideNext();
+    resetAutoSlide();
+  });
+  slidePrevBtn.addEventListener("click", function () {
+    handleSlidePrev();
+    resetAutoSlide();
+  });
 
   // ---------------  keyboard -----------------
   window.addEventListener("keydown", function (event) {
     if (event.key == "ArrowRight") {
+      resetAutoSlide();
       return handleSlideNext();
     } else if (event.key == "ArrowLeft") {
+      resetAutoSlide();
       return handleSlidePrev();
     }
   });
@@ -109,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.add("active");
       slides[i].classList.add("active");
 
+      resetAutoSlide();
       pageNum = i;
     });
   }
